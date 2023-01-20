@@ -1,0 +1,282 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_dt_bdmindex" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_bdmindex" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>748,449.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Web Automation, &#xD;&#xA;Read a Range of Heights and Weights from an Excel Sheet  and Type it Into the browser to Get the body mass index and write the information in a Range of Results. &#xD;&#xA;" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="400,660.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="BmiResults" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_bdmindex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Open the Excelsheet in the background and transform it into a Datatable UiPath can work with.&#xD;&#xA;&#xD;&#xA;File needs to be closed " DataTable="[dt_bdmindex]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="337.6,164" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="bmindex\BmiSheet.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open the Browser to use the BMI Calculator" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1900" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Units'" sap:VirtualizedContainerService.HintSize="529.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.calculatestuff.com/health/bmi-calculator" DesignTimeRectangle="541, 370, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FriendlyName="'INPUT units_metric'" FullSelectorArgument="&lt;webctrl id='units_metric' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='units_metric' tag='INPUT' type='radio' class='' aaname='' /&gt;" Guid="5095bc44-81e6-41f7-b7d2-11a6e4cae3e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACqSURBVDhPtZMxDsMgEATzanoewCMoqPgJHU+hod1oLGE5XKI4Nllphe5YlrvDfvTedZf/M6m1KsYo772cc9tKTP6d3pjknBVCUClFrTUBVmLy7M9nXkwQpJS2g5/A/my0m1AqN50BumNruwk9U/IZoENvTBjemME3oENvTHiFX4DemCypZMlMlrwOvP2dDCLgJkoeM2IlJj8bQGMCKZWeGd6lf+cKF5h0PQFH5jQdxkD+QAAAAABJRU5ErkJggg==" InformativeScreenshot="7bf3164ef66271f0b57f633ce8ff933b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="441, 339, 333, 27" ElementType="Text" FriendlyName="'Units'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='col-xs-12 control-label align-left' aaname='Units' check:innerText='Units' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVEAAAAfCAYAAABeU/7qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFjSURBVHhe7dnBjYJAFIDh7cmypBOthFiIsQsTauA6C4RhRM1u9BFws9/hu4zDcPvzGL/atk0AvEdEAQJEFCBARAECRBQgQEQBAkQUIEBEAQJEFCBARAECRBQgQEQBAkQUIEBEAQIWiWhzqtJut0vVqZn/dj4M67vjZb7+g8ux2989czjntSbV+yrV1/k+gE/wcRGd6wPaR1VEgc+0akTLvjod+vXBPJBlEs0BLfL5+ZzJ25EGiNkkog/2dWrGZ36NaD7zzsO7AVawTURzNK91qoYIHtJlfGZ+J/rkc348UzSBT7DR53zelyP5QkTby81VwO1egPX9wYiOpil25F4U2MAiES33lCWGJYAlmotGdJIn09t3A6xjmYg++cQuSgDfj+iomzbzGQ9MosAGFopo7y54g/l0+HpEO9OU27m7Fpjc/LsPsKYFIwrw/4goQICIAgSIKECAiAIEiChAgIgCvK1N3xBqB0dOEMArAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Pass in the DT from the Excel Sheet opened above" DataTable="[dt_bdmindex]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="529.6,1587.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Type the Value of the Current Row for the Height and Weight " sap:VirtualizedContainerService.HintSize="496,1438.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Current Row for Height " ClickBeforeMode="Single" DisplayName="Type Into 'Height'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" Text="[CurrentRow(&quot;Height_cm&quot;).ToString]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.calculatestuff.com/health/bmi-calculator" DesignTimeRectangle="456, 430, 259, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'178'" FullSelectorArgument="&lt;webctrl id='height' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='height' tag='INPUT' type='number' class='form-control' aaname='Height' /&gt;" Guid="775d9975-3edd-425b-8ce1-24e7a3b8357c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQcAAAAmCAYAAADJLF6AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHoSURBVHhe7d1PbrJQFIbxbpLNyFJkHYZFODHGf0MTo9GBjnSi5pRzvVeEHhgJ2tznl7z5pOUb8hSaJvxcLhdhjLH6iANjzFwlDrvdTlarlcxmMxmPx4yxyLZYLJ6fn3HQMOg31uu1nE4nOR6PjLHIplEIn59xWC6XLgzn81lut5vc73fGWES7Xq92HObzuftXTwIQH732zTjoF7UcAOLUGgfuGoB4EQcAJuIAwEQcAJiIAwATcQBgIg4ATN3FYZJJMshl7w9FppIliSTG0lE4q3bOcOq/DqBv3cRBw6AXdyUOf+1HaXFeViTBHUk+eA3C47gMB4A+vTkO4Sd/KtmwuPDb4nDIJS3OzSb+2P/f8tjHg7sH4CPeHofc/6R3F3ZLHKbD+mMDdw7AN3lzHEqtcXB3DankB3/8wkXD3X1U7yIA9OsjcbC/93isKO8U6ncSAPr0gTg0PC64X2KGX056LXcYALrVfxyaLnjiAHyV/uNgRcDhsQL4Jr3HoflxQ9X+CKrxPABd6ywOAP434gDARBwAmIgDABNxAGAiDgBMxAGAiTgAMDXGQd+sTRyAeDXGQV+9v9ls/GkAYtMYh/AK/u12608FEJPGOIRA6Kv49Y3behJjLK7pDUL4XIkDY4yFEQfGmLGL/AKRZQCJC21BBwAAAABJRU5ErkJggg==" InformativeScreenshot="f2812bdba23b65c62e7e7bcff30930c9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="441, 403, 333, 27" ElementType="Text" FriendlyName="'Height'" FullSelectorArgument="&lt;webctrl parentid='height-weight-inputs' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='height-weight-inputs' tag='LABEL' type='' class='col-xs-12 control-label align-left' aaname='Height' check:innerText='Height' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVEAAAAfCAYAAABeU/7qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHuSURBVHhe7dpBjoIwGEDhuRPHkpvgSYgHMUSXRt1JQuLG6M7tP1Ok0kIxYit24lt8iUKpxMVLK/5cr1cBALyGiAKAByIKAB6IKAB4IKIA4IGIAoAHIgoAHogoAHggogDggYgCgAciCgAeiCgAeCCiAOCBiAKAhyARrRapJEki6aKyzy2z+ngyL+zjAwbnGVLmkqr5Z7lUrvOauo8n7wEAxogqoqM9E9F33wOArzZ5RPXYm1Tysh3vmqeYm2MLydRrHU0zovqzzOuNYzeZFM28ABDCpBG1A9oPW3ee3vhZaq88dUR7mjgTUQBvFjSig+qIVpLP1HsjZE3kutG8vW9WnX+yZedzehFtV7R65aqvca2GASCUCSPaRtF9vhNR5++dD7bzzRg9BxEFMIUJt/MPItpEkIgC+G8mjKhjO99hzzNiO09EAXxIBA+W+pHU8/TGDz1YeiaiNfvfAADga9KImmM18xrXPO1fnNQK9oXt/H0FrBBRAGEFieh7tPG7R9X5OykAfE7EETVXobbeihcAPiTqiNpb8QYPiABEJPKIAkDciCgAeAgW0ePxKPv9XjabjaxWKwBfZrvdOo/HZL1ey263k/P57OzYK4JEVAVUfYFlWcrlcqlvEMB3UZFyHY/J6XSSw+Fwv1dXz8a5yi/LPckceJVhkQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Current Row for Height " ClickBeforeMode="Single" DisplayName="Type Into 'Weight'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" Text="[CurrentRow(&quot;Weight_kg&quot;).ToString]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.calculatestuff.com/health/bmi-calculator" DesignTimeRectangle="456, 506, 263, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'68'" FullSelectorArgument="&lt;webctrl id='weight' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='weight' tag='INPUT' type='number' class='form-control' aaname='Weight' /&gt;" Guid="e22ddef3-f908-4bd8-81ce-7b1c7063656e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAmCAYAAADTEL4OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHYSURBVHhe7d1LjoJAFIXh3iSbkaXIOgyLcGKMAkMTI9GBjmSi5rZVPORp30F1gvJ/yYlgMfXkVmniT5ZlQgghf4WyIISo0iiLNE0lSRLZbDayXC4JIRNPFEXVdVUWpijMwm63k8vlIufzmRAy8ZiSKK+rsojj2BbF9XqV+/0uj8eDEDLh3G63/rLYbrf21TwEAKYLesvCvGmaBACMt2XBVAGgRFkAUKEsAKhQFgBUKAsAKpQFABXKAoCK+7JYBeJ5XhV/cSwWcuv5a83zAlkX7wMYN7dlcQrFf5ZAsCrun1UQ1O6PC79REPZ+FkqzTgCMkdOysFPDfHhW6KzbcmG6AD6B07KoTxF9mCyAz+W4LHwJT/nWozyX6JRH/UzjzRQCYFycTxaNQ8vWGYbdhtQmifakAWC8/mGyKG4Kr3OK5mFn7ijhrPuNCYDxcVoW5oPf3nZQFsB3cFoW+XkE2xDgG7ktC6P1o6zeSaNa725bAIyT+7IA8JUoCwAqlAUAFcoCgAplAUCFsgCgQlkAUKEsAKgMloX553TKAkBpsCySJJH9fl88BmDqBssiTVOJokgOh0PxKIApGyyLsjDiOLb/qG4eIoRMO2aAKK8bZUEIIUOhLAghimTyC1PeY4unBoBMAAAAAElFTkSuQmCC" InformativeScreenshot="a11688c041e3291ae35cbb2e4aab390c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="441, 479, 333, 27" ElementType="Text" FriendlyName="'Weight'" FullSelectorArgument="&lt;webctrl aaname='Weight' parentid='height-weight-inputs' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Weight' parentid='height-weight-inputs' tag='LABEL' type='' class='col-xs-12 control-label align-left' check:innerText='Weight' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVEAAAAfCAYAAABeU/7qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJRSURBVHhe7ds9bsIwGIDh3oljlZvQk6AepIpgRMBGJCQWBBurG8dx/DlxEPA5pYh3eFRw/lCHV7ZpPy6XiwEAPIaIAoACEQUABSIKAApEFAAUiCgAKBBRAFAgogCgQEQBQIGIAoACEQUABSIKAApEFAAUiCgAKOgj+jMzk8nETL6KMFbOzdSOVabf++vnDii+3PWzn/TxHv/Mz7nZp4439t/T+DMBgII+ool42VDVsRwYHyViN0R01OcDeEsZlvN7M/+0wZyaeenG/CzSmZli4LwotmJc3kPORMN97bmFmdnXPpoyon7GW/HBjJ8lrgMAhSx7onHwQtyKJlzReBPVXtTEsf49UxGsluX1z05Ee1yciSiAMWSJqA9UPeuT+57N63rcR67eD/Wz0hDN6NzqfTLM7XsRxV5E+zPi7jUs5wHkkiWicimdnH2KcRewEMWe5kunKIByqd4+N9w7iqg4x0eTiAIYS56ItlGsltjRDDPsg7pxP0u8EtEmgkQUwCvIFNEQPRlCO+7D5XTjKpbzHQ8v54kogD+ULaIyllGkfNyswbgGPnhD+5mtoS+WboioMxxwALhVtoiGWMZ/qiRnkd0ZYDeM8ng3onLMBfD+5Xy8jUBEAejli+io/PJfhDYRTQD4ay8S0c6eq8D+JoBnepmIytlo64b/wQeAMb1QRAHg/yGiAKCQLaKHw8Fst1uzWq3MYrEA8ObW63Vy/JmWy6XZbDbmdDolO/aILBG1AbW/sLIszfl8rj8ggPdmo5Uaf6bj8Wh2u1372VI9u8/F/AJlO5wiuJIYDQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick sap2010:Annotation.AnnotationText="Submit the current combination of Height and Weight" ClickType="Single" DisplayName="Click 'Calculate'" sap:VirtualizedContainerService.HintSize="433.6,188.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.calculatestuff.com/health/bmi-calculator" DesignTimeRectangle="674, 570, 84, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Calculate'" FullSelectorArgument="&lt;webctrl id='calculate-button' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='calculate-button' tag='INPUT' type='submit' class='btn btn-primary pull-right' aaname='Calculate' check:text='Calculate' /&gt;" Guid="d8fe3c7e-dbaa-4e2f-85c4-ea7a59942962" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAmCAYAAABAvVyFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI9SURBVGhD7Zo7bgIxEEBzokgJF8oFIqVJkVyCHCJKGxoSKUdAKC1FBA1SiogKJJBoJjv2ej3jD6zBI5oZ6RVre439PPZS+Gq73YIihwoWhgn+/vmFu5cvuH14g+v7V6UQ9Ib+0GMkGAuxwc3jOwyePmDw/KmU0nhDf+jRSe4Eo3kjN/WiUgR6RJ9MMFrXzK1E4xF9MsF4hiQbKyeBPlWwICpYGBUsjAoWRgULo4KFUcHCVBc8nO+BxW4Fw0S7NEtYNK8spqm6Ekr6wbZ7mIxTdedTUfAMJrtY6OgPLW9gRMryqOAsJnOT2WrFr+cz9kzD18Vi7AK58Atlyv+WXbvBeAXrTlTQj6mjwdu58L/Ly9nvFFJJcCgxRyuXDNgeKWkx4aLR596CW7leXrjTsC3NYD6G/nNLU0lwOKgCspl3uM+iDA7gC4dtvWBTF2as6bvvMce5mGC+9XOZRzOLUy7YlnWREczHReOigvtvo24CboI5MdUEe7FufIcyOOr3TCoJjs9Lih80n4zhiBiehZ7egqebaFxHj4jMPE6hmuD442GxGZsS6J/7fuSMrHarmrrwX0VOMN3e5rmJjGD3Lt2N50ivKNhiJ0oiHJiboAmcGJ0QFxz3R0W0C9rGYkpF8X5YHzgeMwbfl6vvpJrdQOJEuUh1wQpHBQujgoVRwcKoYGFUsDAqWBgVLEwkWK9OVSR1dUov/9UjeflPr69WoPGG/tBjdH3VSUbz2ADPEKUM9Ib+nNxIsFIfFSzKFv4B06wzbOSdXL4AAAAASUVORK5CYII=" InformativeScreenshot="f92555b9cd45c7725f4520134a31a147.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="456, 339, 303, 280" FriendlyName="'Units Standard  '" FullSelectorArgument="&lt;webctrl parentid='calculator-form' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='calculator-form' tag='DIV' type='' class='pull-left' aaname='     ' check:innerText='Units&amp;#xD;&amp;#xA; Standard    Metric&amp;#xD;&amp;#xA;Height&amp;#xD;&amp;#xA;cm&amp;#xD;&amp;#xA;Weight&amp;#xD;&amp;#xA;kg' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATMAAAEcCAYAAACrolO9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABIGSURBVHhe7d3Pb9zG2cDx/kUFWv0tuvduFeilEWKdcpaDFEF8si4Bmh4UR+mlrpC7DWEhFTAM/bKRQEIXFiwINpLADlDbmPIZcsiZ4XC15HJ/Pft9gA+cXVLULvPym+HK1fu7d+/eGQBYdsQMgArEDIAKxAyACsQMgArEDIAKxAyACsQMgArEDIAKxAyACsQMgArEDIAKxAyACsQMgAplzIYPN8za2prZeDgMdzrYts+v3RuEz48wuJftn33N9oF7bmh272yY3ctwPwDoy1RiFpKQSdyIGYDpaR2zar9dsy3PW2GoqpWZC1nFHd8dp9Q5lgAwQcxq7uyaYfE1t8bMHTNS+94AMKbuMXPxutw1GzZG22ZQfE34mVniNrM4JvEC0JcJbjPdfi5WLWL2buDdovr7AkA3c4pZoVzVFfjcDEBHZcyqz7GqKFUhquLVa8xKbqXmf28AGF8Vs8StX6UKUfeYFbLVlztGDSszAB15MRNReKxwtdQ+Zply1ZeJbldL3k9DAaCtKGYAsJyIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFZIxe/r0qfn666/NZ599Zj755BP7pzyW51P743acU2C6ajH79ttvzeeff24Gg4H5+eefjYz8KY/ledkefw1G45wC0xfETC6qb775xl5sTSPbufjGF5/T8/Nzc3BwYP90wzkFJlfGTG53ZJUwzsh+jbdH8e8oy4S/eFF+O8eoXwc0Ifv9+zx+/ttEwvcwHv+cXl9fmy+//NLeYjryWJ6XaTynxfls/P63bY/Y/4H/qN9O0vv5A2ajjJl8fiO3PeOM7Cf7+weyUhdCcbFVv2VjdWLmn9M4ZH7QZG47pxvJ/1d91a9t6i1mwJIqYyYfSLvPc24b2U/29w8k7IWS+FU+1fPVxedfgO5XBpW8iy2/+HaDX01UhbH+9Rv3tsOYFTF124NfEinbste1674+9euJsuN1jZk7p3JLmQqZI9ubzmkZ54fZ+4ret/3VSqnX5//KJW9b8L7Kfx/b2bGL5+W52n8Mwn9nhBCLqoyZXFRtRvb3D2QVF9HoC18ujupisSHyAxgdw12A5THt9qavj36rbRGy6vUU293+xXY/Evn3G/G72Vpw51Q+I3PhSpHtMvLPteOUccnOm3+eMvLatg/y2ITnx/sddFGc8v84uCAVofIDFeyfn6/4d9fVogosgF5XZiL4r7+ILsA4ZnXhxWmPFxzD3x5dyCK6eGPB8Wr7pi7WxPcYU68rs+w1Du75r1Vel0TLf335649fqx+wVMwaz18cRmCB9fuZWSS4/SsDIRdQPTZxBN0FNjJmyXCljp9/TXn8xpglLu6GQIyjz8/MXFzK8yihsVHyX3P0Pn0dYlY/98DiKmPW208zU4L/wssFVAWkipi/vbrAJotZvq8c30UgON6UY9bfTzP995Ofp/wW0z2X+uc0YgatypiJyf6e2YjPU2oXpPvnVCjCC2xkzG65GG1Eo4txdMxS7yHxPVqY+O+ZRa+x+pwsFf8R/w4KbWLGbSaWSRAzIReVrBLktsd9hiZ/ymN5vvGiE/b/+OsXvr3dDC6gMGbVxZc/9o8xOmbxdvf1DRdj8fqaY+b2qb7G3SrH76mNic5p/Brde2gKkt3uv6fwHLeKWSKO4b9LYHHUYibkdkc+v5EPpOV2SP6Ux2PdWtqLIQ+AE68UXCDs89H+2wdFkIoL5raY+cezX/8wvPj9bfY4/sWeilnGfs/iazay49Uu+A46n9Paa4zff/18+K8/fw/e+S/PtwT7tpiJfJ/yeMG/C2BxJGMGAMuGmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQgZgBUIGYAVCBmAFQoYzZ8OGGWVtbMxsPh+FOB9v2+bV7g/D5Bo3HaXK5azbk+Hd2zTC13ZHXMeZrALB6eo9Za+PEbNqvAcDS6xQzt29uw+xeVvunjjO45+87MNvyzy5efszc9/K/3nsut20GxXEBwGkdszBk9cDEx6ntf2cjXIm5mNUUkSRmAMZQi1kjG7Oh2b0jj72gFLGJ45U/LlZhme2D6PvUYlat8NxKzn1NanUIAL6WMavilN4exSz5ediI28xiH3cMYgZgXC1vM0fErIgRMQMwDy1jlrjNjITHaXGbScwATKCnHwDUY+WOU9u/6QcA48TMCn96CgCidcz8fR3/a1LHqf5qhqzoOtxmlitCQcwA1JUxm44qQmXckp+jAcBkphwzf1UWqq0AAWACU49ZeItY4IN8AD2bQcwAYPqIGQAVgphdXV2Z8/Nzc3x8bA4PDwGsmNPT0+Tzi+To6MicnZ2Z169fp2MmIZM3cnl5ad68eWN3BLBaJBap5xfJzc2Nubi4KF9rLWZSOgnZ27dvzYcPH8zHjx8BrJD3798vRcwcCZp0qxazk5MT+6e8KYZhVm/k2l+mmMkKTW45azGTNyFlZhhmNWfZYibk9SZjxqqMYVZ3iBnDMCqGmDEMo2KIGcMwKoaYMQyjYogZwzAqhpgxDKNiiJmbpztm/e6+eVU8NOaZ2VlfN+sJW4/cXtE+D54VzzMMM+shZjISMolRELP6vHq0le23kyXMPjL7d/2A5Y+r0DEMM8tZ8Zi5ldWW2XmQhWpUzK73zVa2787T4nHxtdXjInaszhhmLjNRzF7smU3bgtzmd8+95++bJ4/vl9vWv3oS7Z9tj483pl5jtl+spGyIRsTs2YPsRQehYmXGMIs03WP2xNzPonT/ceKxi5YETLaVEXMBe272Nr34tdRjzKoZGTO7Ktsy+9fFY29s5OybC1dpDMPMdrrG7Pl3m2Z9c888T2zL47Vp9l645+rxsl/vYtfSzGOW3pbfZlYrsXilxjDMLKdrzJ585a28Yg0xq1ZxSxWzhttH+0MD98OAYkas4BiGme4Qs2IaY9YUKGLGMAs1XWPW5TZzOWOWipYdbjMZZpGma8zqPwDwPhfTFLPm20+Z6C/NNu7HMMy0p3vMMjZa3rXs4rSMMWMYZrlnopjNCTFjGKY2xIxhGBVDzBiGUTHEjGEYFUPMGIZRMcSMYRgVQ8wYhlExamJ2fHxMzBhmhWfZYnZzc2OOjo7qMTs/PzfD4bB4WwzDrNosW8wuLi7M2dlZPWZXV1fm9PTUvHz5snhrDMOs0ixLzGRFJiFzr7UWMxc0Kd3JyYndEcBqkQVN6vlFIreW0ik/ZCKIGQAsK2IGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkAFYgZABWIGQAViBkCFPGYH22Ztbc2s3RtUGy93zYY8l9l4OKyeT+3bYHAv//rtg/T2Gvc97+yaYWp7YfhwI3xNAFZeHrNERCQYNloNz08lJmPEbKrfH8DSKm4zh2b3joRrw+xe5hvcqiq3bQYN+wXR8573j+GvzKrjyr4Dsy3/7OLlx8ytADMuXOH38r4OwMorPzMLw1NFZlAEJHi+iFstLt62+jFTMcpuF+2fUcxq8kgSMwBNypi5UNhVkP+5WPHP9nkXG/t5mVulVfEK9s0eJwNZPvbiVItZfYUYfw23mQB8Zcz8W7zkasx7Pg9JFaea4ocDQYj8W0j3Pb1jBzHz9nHxImYARqliVsYpu/ULVlzV52T5827VNCJmRYyIGYBZ8WJWxccPkjzvApKLI+fdZkY632YSMwAtBTHzoxXEwkVGNEau4sLT9HlXqekHAGPELNccUgCrJYhZFa3wr1j4q6p4RRQHyt8ex8x/Lg9R+9vM8PaWmAHIhTGbKndb6gUvES8A6GKGMYs+k/Pw+ReASc00Zv7qrDTG/8YTAG4z45gBwHQQMwAqBDG7uroy5+fn5vj42BweHgJYcaenp8nn5+no6MicnZ2Z169fp2MmIZMXfnl5ad68eWN3BLDaJB6p5+fp5ubGXFxclK+tFjMpnYTs7du35sOHD+bjx48AVtj79+8XMmaOBE26VYvZycmJ/VPeBMMwjLRgkWMmKzS55azFTF60lJhhGEZm0WMm5PUlY8aqjGEYN8SMYRgVQ8wYhlExxIxhGBVDzBiGUTHEjGEYFUPMGIZRMasXs6c7Zn19vbT16FWxIZ9nD6pt6+s75lnxPMMwiz2dY/Ziz2yub5q9F4ltPesvZtf7ZiuL1M7T4nGWqh3v8atHW0HA7OO7+ybMHcMwizgrFTO76nrQvNaqbbfxY3XGMMswvcXs8X17Z7b53fPgsbW5Z/a+yv786kl4jDH1FjN/FZYaVmYMs7zTS8xsuLyw2W3r5v7j4rEL2/xjtmX2r/NbS1faWtz8z9RGrOIYhlmsmThmj6NwZZ5/txmF67nZ21yImEmkvNvG6DM0e5vprcTilRrDMIs7k8WsWMCs3zdPvG1PslvK8nbTe25BVmbFg2Kqz8nCHwbk88rs363/xJNhmMWbSWMmK7I4VAsbMwlTfFtJzBhGx0wWs+JzsugzsoW9zcw/D+M2k2E0Ti8xyx7bgLnbzShuC/MDADvRX5pNrtTK7fXbUoZhFnP6illt9ZX4qxnxree4+o0ZwzAqp3PMWkp9jjYuYsYwzK0zjZjZW85sNfbcPVdbxbVDzBiGuXWmszIrbjnLj566h0wQM4Zhbp3pxKxfxIxhmFuHmDEMo2KIGcMwKoaYMQyjYpY2ZsfHx8SMYZhyFj1mNzc35ujoqB6z8/NzMxwOi7fBMMyqz6LH7OLiwpydndVjdnV1ZU5PT83Lly+Lt8IwzCrPosZMVmQSMvfaajFzQZPSnZyc2B0BrDZZ4KSenye5tZRO+SETQcwAYFkRMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzACoQMwAqEDMAKhAzYMb+8+Kl+dPffjB//Ms/zO///He0JOdNzp+cR/+8EjNghuQClIvxD3/93qx9+sis3f032srOm5w/OY9+0IgZMEOyorAhS12kaEXOo5xPd26JGTBDsppgRdaT7DzK+XTnlpgBMySf+SQvTHQi59OdW2IGzBAx6xcxA+aEmPWLmAFzQsz6RcyAOSFm/SJmwJwQs34RM2BOiFm/iBkwJ8SsX8QMmJNJY/bFj/8zwfx2Y75I7Jf2X/NT9iU/Haa2tdHmOLLv/8zgX6ltkyNmwJx0j9mpGfxWj9c/r6Vov5p/es81I2YAetI1ZnZFllyF5ZH75cfT4LE/1bZ6hPIYuqmiaJ+//m+539q/bswvZZSi49ht/oT7uam+b/h88H1aImbAnHSLWRysJkXIvDjkt6XpCMWB9B+PHbMiZFWo4hWk7OuvzMLXMP57SyNmwJx0i1kcgBYaV1Sjj9lqZRYJIyn7VjGz2+KVmD32uLfKIWIGzMmsYhbePjatqPwVU6h9zPLnymmIWfi6/CFmwFLpFrPxb8XKWLiYNEWot5hVEXOvb9TKrHbcCREzYE66xaz++ZavCkQYDuuWCIWrq8rYMTv8tfa6br3NbHgfXRAzYE66xqz+wXouX4mlYlU9HvcHADZMxe2e3Rb/dLMpZv4ton2cTUPM3Nf6q8xJAkfMgDnpHrNcHhVv4gi4mNiRiPjxCGNWP54fnSKexfx06EcpPE5wDHk99jVUx3Lby4DZVZ43HUMmiBkwJ5PGDCFiBswJMesXMQPmhJj1i5gBc0LM+kXMgDkhZv0iZsCcELN+ETNgTohZv4gZMCfErF/EDJiTP/7lH2bt00fJCxMtZedRzqc7t8QMmKE//e0H84e/fp++ONGKnEc5n+7cEjNghv7z4qVdTdigsULrJjtvcv7kPMr5dOeWmAEzJhegrCjkYpTPfNCOnDc5f37IBDEDoAIxA6ACMQOgAjEDoAIxA6ACMQOgAjEDoAIxA6ACMQOgAjEDoAIxA6ACMQOgAjEDoAIxA6ACMQOgAjEDoAIxA6DAO/N/FfeWMVTZrt4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NGetText sap2010:Annotation.AnnotationText="Get the result and store it into a variable" DisplayName="Get the 'Body Mass Result' Text" sap:VirtualizedContainerService.HintSize="433.6,188.8" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2cb0ec3b-31f3-49d7-8510-af328b2d4b7e" TextString="[BmiResults]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.calculatestuff.com/health/bmi-calculator" DesignTimeRectangle="831, 385, 219, 20" DesignTimeScaleFactor="1" FriendlyName="'Your BMI is 21.5(Normal)'" FullSelectorArgument="&lt;webctrl parentid='results' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='results' tag='SPAN' type='' class='big-bold' /&gt;" Guid="3497785e-b24e-49de-8033-1877b108c9f3" InformativeScreenshot="3fa2fadf7bc712d3d04b919bb8e88643.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="420, 301, 1080, 40" ElementType="Text" FriendlyName="'Body Mass'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='Body Mass Index (BMI) Calculator' check:innerText='Body Mass Index (BMI) Calculator' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABDwAAAAsCAYAAACJ86hrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAB/OSURBVHhe7Z3PixvJ2cff/2lOOgwMMRj2sL5YFwsMFj7s4GwGDDsYMviww4LReh3hw2DCMgvLELA8YZEPQQ7BB8MsMXKCkcFkDEFOzCobExEnIrMgGHjeqlb/eJ7qqq5qqTUe298PPOy61V1dXVVd08+3nqr6PwIAAAAAAAAADz/++CP99NNP1dvf/kJXbvbpyu//IY7/8W6ffqaO/+zuUBx/+fs/q+N/pnt/y45x63+1QisrK3Tzsfz/7Jwf6N7PZ8dN+/S3P8zOeXzT+vvKyk3qp+m404vS+fs9+pQdy+xTuvf32bUyf6582e6prU83c+cq+6of/Z6kLS279w+//TQ6ljxz8m/7+cm9WF7iMjKvT/5ddP/cvX5+j35wXpPVn+u6KD+R5cskutZVF7nrZ2Y+S3p9er6rrlx1qy3OW5JGLk/Ztakl58R1ytulbDO6XuztIfcMFkvy6Gsz2TOVa/NZGZyM6b4qAYIHAAAAAAAAwMtJCR6p0GFaLHwUCx6GY544iInDyI8x5z1x5GbOYebM5Z1Fl/iQXMOc1vQatxMs/82d1ziNAkud//TZLKIEM/Pe0qlPrs3yav+dpe0RPEwrvr86ZivjpK5ikSB9ZodQMbN8XmX96mNZHVud8SQvcdnm8mrki59jCk5Z+nG+coKHRehITbaJJM00LzyfRn3k2pPlfvY8u/Mjnynf5pP0nM98QgbBAwAAAAAAAFCKpQkePw3pV0zQ0JYTPXK/PaM/xv8WljiiBSJAznll182OWZx7rxiRd/5SB9PiFCcOoekUpw5oYgWOYt6htpuZpnkv4Tg772cpE8PBtpYrO56Y9f7O62W5u+4hzcyrrT6V5QQCbvK+phBgL/v4PnEZ5s+Rv/vLfGbZveM8/fwm3Yz+q65jz2CWc2Zxvrk4kqRv5iF5f1KTZSafKd/mk9/zZpT9kg2CBwAAAAAAAKAUyxM8EhGDR238g+79OhY7fv0XepmcG0eDmNNcEnM7XB7H+pQIHonJ52BpWs4xr3X9bv5blMMcgodZjua/S91f/dsuQMhyz11jNTOvjrorFDyye918bAgV4jd+jTwvVz9mGXvLPLYkn1/djM7X+Z2lfZNuRv+dtY8kTzaL8mC7nyMPZlr2OiwjeNjb8LIMggcAAAAAAACgFMsUPH7607M4moNHbujID/PfMxHkV39KjjFLnDeXJU5dOoptOsSJ82v+23aNaXnnz+ZMmo5yzik2LDnf5pSnTmmaPs+Dy+nP7iXTTs5neUmeOYoISH5Pni9fRvb0Qu+vjqX1x8o4yUP8jEXlkZl576ycs+vy+cmZ0Z7EPY186WNpfYjpIdl16e/JNQ6xIW9Z3WiL8pu2R3Z9fMxZNunzZG3UzHPORBvwCx5Jes4yPSGD4AEAAAAAAAAoxVIFD2WztTkcgkYqiOQXN03M7by5nXXTUmeRO5TCfIJHbDoPpQUP6dhmljmU0hznR8/vSiu7d5KXnEMuLLzMZHrh95/ZrFyT8jDNlWe7yXtH5xriRWqFYgN/ZrMOXOWRd/5zVlrw4OUStz/2PFlZOMrcvJ/FZuXrruOk/O2CR2y8zZsWv5Nh9be4QfAAAAAAAAAAlGLZgkdkTNiwmTWyI7LM+UqcM26Jo2Z3DpWT+tv86LhwWL+6F6fvEjyUcZFkLsFDW95ptT1PZsb53Hk2owCS/BQ4n6aTLu4tnFlVDkZEQS49z/1l3rNylaKHFBpsebYZf470XNMZT/PhtjQdXq6pmQKB2Tbk77mpMZb24bJ8Plzt3Ww/LE/sfvdYGcuyNJ9J/p5rr2ab18fMcmbPF1p/ixoEDwAAAAAAAEApTkTwSMwQPtxCBwy2PDspBx1WrRUIHmPq/oKpMT5bPUuNi5vU+rZLg9E0TuMU87pLG2n+2zSID7897OW9+WAS/16S4wG1V430ftFVdwFORJtYofbT+Php4tS12xPidY82ovbcpM7L+FjM+P5GWmd+q9HZCw3avLFH3acjmh7HiRRgTf9aj+Z8M2lwu2akt0Hd1/GPAqNPuG2r7Sn1b52Lfq+r30+k552O6PBBh9rX16lxfi3L3xxlWz2yzE7lO2zlXc03AOBD5kQFDxjsrVsS7WBOZ4GddqtO8BBWo8YXPRq9lQ/eQN4RwWNux+ppm2pmWhA8ioHgcTo5HlH36kwkqN/JO/XlBA9ptQvb1HsVJ+TAnv4m9d7EJ5TBJkQuJHgo3jykrSjNc9R+skTJY3JIvdvrtCbyXmBn1mn38Un3OBA8SvO6T7tXdj8c8RQAUBkQPGAfjLGpGojuePdsSYLHzGpXu6dX9HhXBI85Hav8KLIyCB7FQPA4lYzub8zEu9UWHRzFBxmLCB6RrW5QdxQnZsGV/lzRVzYhclHBQzG825yd4yijRZk826WmKdToqL4rW9S+s0M72m5t0bqI+NBWo8atAxqf2N8BCB7BTIf0MBWwPqBoMQBAZUDwgMFg74IFCx4b94td5elkQqPnPdq9Ij94fde9Nd4ZwWMOx2rap1ZuFFkZBI9iIHicPtKpLO6+RAgSvjY+ndDk1SH1vjYiFQqucwoqpaOvptT/0iJEViB40HRA7Y9n552reGrL+PsW1dO8Kju/SXuPC6asvB5Q5/N6dr6yE5tuY5QZBI8CPkDxFABQLRA8YDDYu2CVCR4pLPw8so936fA0RnmccsFj/RfxqLa2ko7V9HErvrZGzUuNNE0IHh4geJwypnRwI+5LPlbP6vCYSwkejDRyJLJztPs8/sFApP/JRirAlI6+YkJk7VKTGkmaVQgeismDzfjcOu2+iA8uyotdIXasXQuN2pvS4DYXPWq09Ye5JueVBIJHMBA8AAALAsEDBoO9C1a94KF5vkvn0g+pRm6RwVPBKRc8Nr7rsrn+ZRwrNoq82qLO3fmcwQ8SCB6nC+ZsN/fdc07mFTzo+JB246gIbY27w/gHiZl+l00XKxN9xYXI1n6H1WM1ggeP8qj98uHci6qmHA+pcym7f+kpilr85vk/EfEbgkcwEDwAAAsCwQMGg70LthzB47hP7fRDCo5jGGZ5j+jw69nuC9qCHSs+ivxln4bzOoMfIhA8ThEsusMj+M0teCj6t5KyVOYQFMz0R1zQDY6+kkJk/yWvx4oED8XhN0mfsXiUx+QPWywCJr87ThBC/K5R6/GyJ7ZA8AgGggcAYEFev35N//vf/6wOBgwGg50G032U7qsSqhM81KdTJnjUaOdZfLiI14fU22/R5sU6m1u/RnW91e3+AQ1LLtw5ftqlnevrVD8Tp6UX2PusTd2n8XM4P/a0o5UcX6FagJMRwdNbVemVHsm0lPccjpUYRVbORSln8HgarcPSubFJDVEPys7UowUKd+4PKGjXYZ1WXAeNj7IR8Sidz1rUeXAYtpBhVemEECJ48HOSthHnsf1ZI2tvuu3G5VUmf/O3WweTIR3M+14d9dOIgcgudWhY9CzG+edu9dXbNCevOtRM7uuJVlhE8Bjcjq9TVrtjL81c+iIyJDD6yhAip6IeqxM86GUnnSoT3Sc+XB7j3jcO5kxrSJ1P6rR+va3e1UFxe6uk/ykpHBxPaPioQy3x7q7Q2nm9vW6HDl66Wl7J+3jPL5fedJT8vZT5nr3b67R1x709vGjPVnO1R8XxONqSuHx5JfDnjPuvcZ/2rjfpbPR+6K2NN6ldst8EALwd/v3vf9N///tfq5MBg8Fgp8F0H6X7qoTqBA/20b2y0qKDog9U9QF1cKvBRhJdtkbr3w5o4vsIUh9P5sKppq1dU47bX92OYyYaKNOjsQFf+qP9eJcEZee+PoyPlsFS3qUdKybWxKJLqDM4VeWxfYEJCkW22qD29wXtYXxA7ZC0Vpu08+QE0gllHsHj6JD2PO1Nb8+599zTiCpot5IpDfc3pdNoteL3avq0LdZw2PjONbVkQg9/yerqvMrbAruFDO9ma8/41n6YX/BQzvjF+Dplre8DHMQ4/bLRV9PvW/H5tVm7WpbgIZ5pix76s2bHeBdcZVMV1fU/4cLB+MkurQuxwGauLdbD7zPDd35gekdD6n4R8vdSm32HnHkFj/GjNjXSaZZuW7uyRwNnu+PP2ab+SLUzW5qBf3cBAG8X7UyMx+OcgwGDwWCnxZI+KmEpi5bWvylw/pWzuHvZ+Mg9U6fNG7NtDtt8pDu2tWu2j8+YowG1z/Pza3T2crJtYos22ZaJtfN1FmptOI5CaAgJwx6xue7zrlliL+9SjtX0gFrxuUlkSogzaDq10Sgh325Sj7jy6IrIHCHu0wHt8DqIIhRas3SU6ZHB2UheYnXaeWYp36rSKUNZwePzNmtv7rYW2apyPl2CVVXtNuF4Qn2xYKQy9l7Z6rP+pWvrUGPxSccWruPf8QVAF60L/v4VjDbHzCt4iEVLz7vXl7CmXyr6Ki9ELk/w4NNa/GKRi0yg0eavg0WotP8xyswlHMgFa7Wpe6b9S/79za9fEnafDN/5Aenl+gkdWbFOW7fictL5vnA2J4Y0jbVpJk87s/O/3GB9SZO2kvK+0zEEi6lqU013edm2Iz6zST2rNsqfs071+HlqH6n76+dQaTVVXZt5BgCcXnSo+GQyyTkZMBgM9rZN9018OotmMcHjaDIL6+ej1IWjvMaIsPr42X4wzG91qJy3Q2Okun7HtsWhkZ764Oq8yH/sjx/vUDM3opR3HLnQ4A0N5xEtlzrkXl6xCEd5c8fKE9qfOSnZjhNeZ1CLO+wjWn/YDx0PO3nREaNxtuk+PNKldrVDh7YMTw6pw3fysZRZVemUoqzgEVvt8g71bSOixnae9kUxq223mtF3rM5XG/b3SmGm6YzeMMSn2tWebEfGKK07CiQQ/j7phS7jwy5KCR7HU5q8GlD3Nt+Wtq7q2v2GW9MXoqgnkoIJkWn01xIFDyFWzDkVhUfYOIW1Kqi4/zHLzPoOGzvP1D/vWvuX8SP5/sq/gQH3EfjO96d3+I0hPL50FZTRL7qmWIo26K5juZaLLq+etY50/WzyAYrzO5adlYw2rdMzxVb1jjq3PAYAnDqOjo7oX//6l9XZgMFgsLdpum/SfRSnUPAoazqs9bAgpF2P6mWjS8UOh0aOyDWp8yr+IUEsjqc+Bgt8rvyIouVjr8S0HD6iWmbXBoks7/TjOtixYqPIbDcEnzNoTt858ExDyLa+VPZJ1xAYxtS7Gv/mi3R506PNJJ2cw1dVOiWZR/DwTN0Y/oY5jrnyUlTdbkV5+N8rkWZBFMr02Q67d402fpe0T7kTR+mdPCxoBytJL8RhF228rAVMN3K9Q1wULYqksAmRyxQ8tAC1nlyzqpzO+HAZ+NomXhFpAartfzQ+4WBCvWvZ7772KsRDIb757mPiO9/zO1sDJoo69E0xEv3Aur1fCRE82M4/2uqqDRbe2RA/87srGW06oM4BAKef//znP5jaAoPBTpX985//jPomkwoFjya1ChcdYzsWKKsFjULK/JwzpsoM2FaR/jU0+A4Q2mwfe3yaSoFDIwSJMtvHmsjn46OJQY7V5CFtxefw5/cJHqNHO7R1pUGN82u5MrUihCCz3PgzMOfOio5s0AvsNaIFDR8KAauqdEoyh+DhFbhecEEj386qbrciMibovWJCmbKiSC45wjwTR4Z3s/vpUefeIoJTzOBO9oyurWI5iwgezRtdGnjy7HyHgqKvdPuMz+Hbsi5T8FCtIls0ej4R8KQEj2r7H40ss9w7LMrdIpybaKHhzFlq6EV+xVQPz31y+M73/P7qYLZws17MNSDqyVyfxt+X2cpSPX5JQUoj3pdcXo02PfdiuACA04Z2LPRoKqa3wGCwt2m6D9J9kU3s0FQa4RGZc/R0QDtstMr/sThDjPxe7KhPugQuOgSm96SdpeX42BMfbq55+szpqXJXBOF4BjhWWdlIgcAneJSm8CNZClkr57ep+3w8R3hyVemUxBAz/E5CwHotheVVdbuVbSh0oUnxXhVNmzpWThQTAc9d3ch2UgkZdQ6CR/eErUGxiOAxM71w66Hz3XW+QyHRVw4hUraLqgWPEXU/ya4L7V85JyV4lKbwfdLIMjOfXbT1hZ6r+D55fOeXTc9HQHrespTiY/COZazN5/tIma/1Rae/AQBOFTp0XM+X19EeemcEbFkLg8FOwnRfo/sc3ffoPsicxsJZbA0PPTf+9ZD6+y1qioVGLQsYig8tz/x3Dg/V5tNMxj3hPPRCvmLFNfaPPRkWbI/eyEboQxY3LaKgvL2OlTGKHB/VLCx46Hp9M6LDxz3qxAvKpenZys2YHx/Z6llqRttSHtJoElhGVaVTBtEuQ5wE1gZdFDkVVbfb4z4b2V9RZZUsQuix6yxKwzd6rEPW2T0S84a6B1PeWS/bxqdvxjR83KHWJbnQon1toOL0fdFXQoh8ER/UiHZRteBh9CXJ9KMSCMHDOnXkhCjb/xjPbrYf4cA7tiEOo/g+eXznl00vz3QyodHzPvX227R1WS5eak2vqG+KkHkKER9nyHdYCqHGcz6JDwMA3iu0A6K3gdSOx48//giDwWBLNd3X6D5H9z0+FhM8OBPlePHV5C91aMhH55/tsI8x24eWAzFyxJwEIYSEpsfDvl3XyHD/3PQFPq+ah6vPRXF5FzpWfBTZCAsv5QxOlWPxqEt7erX/iw3Lzgim2cptSsO75g4I0qIV+e90qf+y6AO6qnRKUFrwCGhrRedX3W6N/M9n/nzkdriwLk44L/z5why/uUW93G429p0/CtMvjL5yC5GyrqoWPMKnKbkQzxzcNhekkv7HcKiN9sOFnHnKJaP4Pnl855dI73hKo+cH1P12tltVw7Izi2nW9Lx9GY/EDHnGBNbulclyLltuAAAAAADVUZ3goRBzf81w/af+6SR2HHPT50ovRPAwnsNwdvhuCEHzzwvxlHeBY+UcRVYEOYPHI+rdaIqdcKymIyyuNrN8FJTb5EWP2lf9H+K1C9vU/avbW64qnSAMwWA+J8Gg6Pyq262R//nMn4/pE77gsDLPwq3lOEHBQyMWg1TtyCIqFKZfFH1VIETKuqpa8FCluKhjL0Rpx6KXVVFp/1PkUC/2N01SdB8bvvPD0hs9MCMobaa3td6gZtouHel5+7Ly72KCu/2VLTcAAAAAgOqoVPAww+vF9fNGeBhTAJYf4aE4VuelDhFf5I6PYgUsfufFU95Ox4rtOiDWNZnhdQaPBrRzIT+SWvuoQY0rW9S+s0fdRwMavp7M1tAo6/BP9fSBbrTgXt31ob7aoD1DqMlRVTpFGILBfE6CQdH5S43wcDnRC3Kk3mvmSCV27tYi69dwTljwUPRvZfezXe9L3xV9le0oYlnrJaiuZJ9wkhEefCtdbeHTGfJM/rBNdd2X7PdoYEZjVd7/FDvUvK7nKpeUso6773zf71Ma3Gnkhd9VvaDqOm3d2qG9+weqfMc0m+0XkD9vWc4b4SHX4ZHlXLbcAAAAAACqo1rBw3BcxMe6+NAqsYaHsUJ/P5lCMs9aCOKDvtjZ5A5Nus0en15zqVPBHHd/efPtb1MHhK0zYtvRwuus8Z03Vuq0ff+QxkWe61xOesZ0PKTBgz3aMtZPcC4K66CqdASiXc7rJBgUnV91uxW/5aN9FkfuElO7vE7N1CGqatHS5a/hYSLWq7DUqTd9vhNPGn1VLETKdlG14CGvm0+skNMS5n+v5DawZllU3/8UO9S8rk92DQ+feOBJz1jTqP55lw6LC8r/Hnn7snnbkbFDjFino2y5AQAAAABUx8lFeIiPvxK7tKQjpsoW3aXFs12ogJ8bixt8tX/v1qRBBJS3xbHKysQeZVLorBnh/EF1HLC7TSijfZa3kAVAHVSVzokLHpW3W+lopOJcReg2n40wKyddJT/6jpV94LaVxRijwwELbi4qeCwa4SHrMRZwmRBprYelCh4BW5IGIKcl2tc38fKyw3byMcpiKf1PsUM9/l35ttK/VaOzFxrU+KxF3WdJX1/ScTciZvLnF6Vn7FoVkm/j7681fwF92Vy7tIjFvot3afGWGwAAAABAhZzcGh7GB1wtaC9+mR+xxaOCR2GEpMfP9zuuI7Ydp3ZOeMh4iQiVQkLKmztW2rFno6eOKJNCZy3I6eJMaXC7oNxePaSdW1u0frFBZ9W9vO62cf80wqGqdMoi0pnfSRB4zq+63fIooNCFdId3m7MpBKq8N78Z2Efy3zykLe6cJttJGlvV1oq2tQ2EO1m2qCWThQSPRdfwiOHlriNdfEKk2WYrFTyEsxvyXjsw6/aqehfLLMx8PKLuVeaom4JYUBlwPP1PhMehfsUFmIB7iqmEPGrK6K89wpz8e2jrW4ryHfK3QTJ9KtfZmbcvE/kOFDTF+5Lrgzz1AwAAAACwRKoTPI4GcpcWm+PFF+FcqasPn2JXT+4MYRltFB+ynvRG/ENPm99x5R9xG99103U9al9WtXZBWHkLx+p+N51W4xrNDxc81Mf88/i4A/0RLbeKNcpN7KJT906pEB/lfBeLqtIpiyiP+Z0Ege/8qtutSC9gu1idJnP47e1IR13IEWbh+IpR/Npc26ByePRUfueTPPMLHtqB5lMq7O9AUPo88uZGl7rJdBDXdDfRLioWPPi0j9UdfxstQj2XnErRCxM9jsd08CUvW0u7qLr/ifA51HKKjU9kFH93jLrkwlzhlB8t/PB6VJbPV1G+5W+m2J/D/PubSy8mpC8Tgs8c/UlOsPTVDwAAAADA8lhY8JhORnT4YJfWxaKSLgdIrgegnT09f3tifkwfT+hwf1Os4G//6NKLurEP7NUGtR/l7zt50aHN3KKXAY4rD9P9+Fzs3IRPx/ETWN7MsaqtJuXnXjS12FmTH7N6t42+7atd18H9bcPZ0MbWUYkwQq/Pb1P3hcMNeNWjbfZRLj+Mq0qnJMIBWMBJ4HjPr7rdGumpNtq4dUBji5M6edEVZefaXtYrNirEWgyryoG3629h8DILcNhLCx7TCY2e92j3ilz/pXa1Z702LH32Lqn3Mikv57Qi0S6qFTyEYBQUPVdMbhviM+u0+3g0W0TUwuTlAe1c5n27q8+uuv/RBDjUpojzpf39GD9qsfPya9SYUYwbqu/JPeObQ+pcM9YZUpbPV3G+ReSWFkaf2PvDyXPjnY5NrqMRI9rgJvXexMcN9G5kvP6j9UMst8/1UdbdmwLqBwAAAABgSRQKHvPa2rWCEcEj9cFrfBivnKnT5o0d2rmzQ23LjhyF6Zkh1MpqH21QS6W1c6dFm+fZhydzSoIcVzIW8dMWOGUgDFneboHJcBK0FTh5PmdNrsugbY3qn7Wi8tfW+qxBZ9mI3dq1bdpK729x1IypD9E152e7CMzSVPVwQW4zW7uwm3e0q0qnDMIBcHyMewUMg5Dzq263eptP08nSuzmk9WqkGf3uECm8I7YxeiSYOVqlpz8I+BoUlh1ODEQbn9fOKIfPoU2ECirSKdXmEjIUSxQ8BreztrTI7iqc0X0pOkem21S0k8rsndT9deMjoz8vENw0lfc/Rpm5HOqciKO3vL3ent331hY1jeewCjaWyI3aR824j2rT1mXWPynnv/ubrB2VFTzs/eFm3Ecou7Epy1615+1fZu3R/vdELqSa9TkdGohmM1Vtu+muJz390OxPnO9TWP0AAAAAACyDigWPNVr/uu/80E3RztkXlu32cqbS+3aQjwAxCUlPfYx1X/F57iGChzmiF7a+QDiyvIsiakzHquhcv7OmPma/Xc87M6atNuIIHCn8WHfmGD2kbctWkzZbu9ahoWteeFXphPK2BA9N1e32eEz9rwPqVVntwjb1bBFCpkN3SZVx0ftnjJyn63zMwWi/maVT0L41iwoea1d2qV9wi1DBQ0xr8Z27LMFDTEFYYAFfC9O/dqll7opUZFEkSHHdVd//hDvU4ydmNKLN1mhz3xK5kTAZ5EV7w2qXdyMBgbej0oKHYvp8LyC/NWp8MYvACIn0yQk/kdVo51l8AmP0YJsahuhis7Ure4ZgwgmvHwAAAACAqllQ8JitZL9+vU2dB4c0Kvuh/XpA3TtbtH6xnn38xiOIO/f7NCw5UKnDqjti1Evnb5Pa9wexCMO3zQ0TPOQCh+5pJPMhy7vQyROOVcEosiLUWZuO+rPy4iN1Z+pRVICuTy5c8TSdc+CPpzR62qUdPeorIjF0PazT1p0u9V8GVGpV6YTwNgWPmMrb7ZshHey3aFMvAMtHys83aPPGHnWfuqcm6MVMk/ND1lLRzqucTmOf/hIEn0JWJBwoygoe0QKtOjJhv0eHAR1VsOBhRF8VvsPLEjzY2kjVrS8kmY4Oqbffpq0rqhxFJMTsb8DmjQ71nrvblY3q+p+SDvXxmAb3d6Jnyd6PuG/59oCGjmkegriPavNolDiiqsOm/vB8zyN4RExH1I/eZ/Z3UkdbXNyklm7PvB3xNlaw4Oj48W4uWs65Dg8rryz6skxfXLJ+AAAAAAAqxBA8QA4ueBQtUgcAWBC+jkvV4uL7S7aLD8oMAAAAAAAADgQPD9lWkyu0+QByBwBLhe3+4t2ZAghBtortgQEAAAAAAHifgOBRxPGQOpdmzoQOD+4vI1YcAMBgOznhnfOSTZlYYCoRAAAAAAAA7ykQPDhHk2wO+ptD6n6erU2w0NanAIBwXvfSXWKcW7wCoumA2vH6IeesW8ACAAAAAADwYQPBg+FcCPHjNvUX3Q0EABDM6Lv4XSxYePFDJ+2vUEYAAAAAAABYgeDBmH7fkkJH5Ew0afc5xk4BOFHY9rj1b7CWR46jg3jtjpp9m2gAAAAAAAAABA/Bq262Vd/qWWpe36N+wfavAIAlMurGU1uwPoVkSoPbs51Z6pjKAgAAAAAAgBMIHgAAAAAAAAAAAHjvgOABAAAAAAAAAACA9w4IHgAAAAAAAAAAAHjPIPp/My7u7QCugeYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Feedback message" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,124" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;BMI Result :&quot; + BmiResults]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <Assign sap2010:Annotation.AnnotationText="Assign the value of the BMI Result into the Current Row of the Results Column to be added in the final DT for Write DataTable activity" sap:VirtualizedContainerService.HintSize="433.6,125.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[CurrentRow("Results")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[BmiResults]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFGSURBVDhPrdNLK0VRGIDhI7eipCj/iCL/gPwDUkTIbUImDAwMlBJCKbkP3O9KGFBMzEnkfou8r3Y62z7lDHz1dL69zl6Xb+21YkQKOvCOFzz/wXfe0ITvyMIKxlGIoiRMYxYZiGVjFTU+JBmtmMf/DbCGWh+SjDYsILSCHTSgDvVoDH4T5QeYw88AbuIFNvCAS6zjFtdBfoW7uDy0iZbQjEwsogdpmMAgUtGPKaSjC5ES7FiNc2yhCic4RCX2cQrbNxEp4QZH8LCY2/ERLtuaLecJtptHSmhHDhysF7ZPYhgetgE4ay66ESnB+ipwhiWUw9l2UYZtjMJoQegcOOs97Pwa5NZrOS7b3PYRGAkPUicK4GfqQz4882PIw1CQG6EBrG8Z/lmKY8ygBHtw8GJYlpvpO6HLFH+dXeYnPuJy/c6D6xyLfQGjIYClvat6OwAAAABJRU5ErkJggg==" InformativeScreenshot="bfbd794083ae882a000a36c5d494702a.jpg" Selector="&lt;html app='msedge.exe' title='BMI Calculator' /&gt;" Url="https://www.calculatestuff.com/health/bmi-calculator" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Uptade the closed Excel Sheet with BMI result at the specified row and column for each Weight and Height. " DataTable="[dt_bdmindex]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="337.6,160" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" StartingCell="A1" WorkbookPath="bmindex\BmiSheet.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+  </Sequence>
+</Activity>
